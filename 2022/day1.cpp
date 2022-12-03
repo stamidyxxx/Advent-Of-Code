@@ -57,7 +57,7 @@ int main()
         cout << "The Elf with the highest calories has " << highestcal << " calories \n";
     }
     // pretty ugly, i did it fast :D
-    else if (part == 2)
+    else
     {
         int ret = 0;
         int highestelf;
