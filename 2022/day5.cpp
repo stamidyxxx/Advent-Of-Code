@@ -37,9 +37,7 @@ int main()
         {
             auto ch = in[i];
             if (isalpha(ch))
-            {
                 stacks[idx] += ch;
-            }
             idx++;
         }
     }
@@ -53,7 +51,7 @@ int main()
     {
         auto in = input[j];
 
-        auto ret = sscanf(in.c_str(), "move %d from %d to %d", &amount, &from, &to);
+        auto ret = sscanf(in.c_str(), "move %d from %d to %d", &amount, &from, &to); // credits: some guy on twitter that had this in his solution, i was stuck on this for like 3h lol.-
 
         if (ret <= 0)
             continue;
@@ -70,7 +68,6 @@ int main()
         {
             stacks[to - 1] += stacks[from - 1].substr(stacks[from - 1].length() - amount);
             stacks[from - 1].erase(stacks[from - 1].length() - amount);
-
         }
     }
 
